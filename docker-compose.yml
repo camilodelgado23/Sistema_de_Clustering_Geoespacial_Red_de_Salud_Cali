@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:
+  # ══════════════════════════════════════════════════════════════
+  # POSTGIS — PostgreSQL con extensión espacial
+  # ══════════════════════════════════════════════════════════════
+  db:
+    image: postgis/postgis:15-3.4-alpine
+    container_name: cali_postgis
+    environment:
+      POSTGRES_DB: cali_geo
+      POSTGRES_USER: geo_user
+      POSTGRES_PASSWORD: geo_pass_2026
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U geo_user -d cali_geo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - cali_net
+    restart: unless-stopped
+
+  # ══════════════════════════════════════════════════════════════
+  # HAPI FHIR R4 — Servidor FHIR estándar
+  # ══════════════════════════════════════════════════════════════
+  fhir:
+    image: hapiproject/hapi:latest
+    container_name: cali_hapi_fhir
+    environment:
+      hapi.fhir.default_encoding: JSON
+      hapi.fhir.fhir_version: R4
+      hapi.fhir.allow_multiple_delete: "true"
+      hapi.fhir.allow_external_references: "true"
+      hapi.fhir.cors.allow_Credentials: "true"
+      hapi.fhir.cors.allowed_origin: "*"
+      spring.datasource.url: jdbc:postgresql://db:5432/cali_geo
+      spring.datasource.username: geo_user
+      spring.datasource.password: geo_pass_2026
+      spring.datasource.driverClassName: org.postgresql.Driver
+      spring.jpa.properties.hibernate.dialect: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgres94Dialect
+      hapi.fhir.subscription.resthook_enabled: "true"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - cali_net
+    restart: unless-stopped
+
+  # ══════════════════════════════════════════════════════════════
+  # FASTAPI — Clustering + Endpoints FHIR custom
+  # ══════════════════════════════════════════════════════════════
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cali_fastapi
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: cali_geo
+      DB_USER: geo_user
+      DB_PASSWORD: geo_pass_2026
+      FHIR_URL: http://fhir:8080/fhir
+    ports:
+      - "8001:8001"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./backend:/app
+    networks:
+      - cali_net
+    restart: unless-stopped
+
+  # ══════════════════════════════════════════════════════════════
+  # FRONTEND — Nginx sirviendo Leaflet.js
+  # ══════════════════════════════════════════════════════════════
+  frontend:
+    image: nginx:alpine
+    container_name: cali_frontend
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    networks:
+      - cali_net
+    restart: unless-stopped
+
+volumes:
+  postgis_data:
+    driver: local
+
+networks:
+  cali_net:
+    driver: bridge
+
+# ══════════════════════════════════════════════════════════════
+# ACCESO A SERVICIOS:
+#   Frontend Mapa:  http://localhost:3000
+#   FastAPI Docs:   http://localhost:8001/docs
+#   HAPI FHIR:      http://localhost:8080/fhir
+#   PostgreSQL:     localhost:5432 (geo_user / geo_pass_2026)
+#
+# INICIAR:
+#   docker-compose up --build
+#
+# CARGAR DATOS:
+#   docker exec cali_fastapi python /app/etl/parse_fhir.py
+# ══════════════════════════════════════════════════════════════

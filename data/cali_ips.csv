@@ -1,0 +1,46 @@
+ips_id,nombre,tipo,nivel_atencion,lat,lng,comuna,direccion,municipio,departamento,habilitada,capacidad_camas,telefono,email,fhir_location_id
+ips-huc-001,Hospital Universitario del Valle Evaristo García,HOSPITAL,3,3.4516,-76.532,19,Calle 5 # 36-08,Santiago de Cali,Valle del Cauca,True,243,(+57)3287200762,info@ipshuc001.gov.co,Location/ips-huc-001
+ips-clv-002,Clínica Valle del Lili,CLINICA,4,3.3607,-76.5483,17,Cra 98 # 18-49,Santiago de Cali,Valle del Cauca,True,54,305 097 98 34,info@ipsclv002.gov.co,Location/ips-clv-002
+ips-img-003,Imbanaco Clínica General del Norte,CLINICA,3,3.4672,-76.5218,2,Cra 38A # 5B-10,Santiago de Cali,Valle del Cauca,True,43,+57 327 657 45 18,info@ipsimg003.gov.co,Location/ips-img-003
+ips-sjs-004,Hospital San Juan de Dios,HOSPITAL,2,3.4398,-76.5435,9,Calle 12 # 3-35,Santiago de Cali,Valle del Cauca,True,150,3078856956,info@ipssjs004.gov.co,Location/ips-sjs-004
+ips-css-005,Clínica Sebastián de Belalcázar,CLINICA,2,3.4512,-76.5301,19,Cra 34 # 4B-60,Santiago de Cali,Valle del Cauca,True,71,(+57) 313 028 18 58,info@ipscss005.gov.co,Location/ips-css-005
+ips-ssn-006,Hospital Santander,HOSPITAL,2,3.4284,-76.5198,13,Calle 16 # 17-28,Santiago de Cali,Valle del Cauca,True,137,(+57)3164619122,info@ipsssn006.gov.co,Location/ips-ssn-006
+ips-cmp-007,Centro Médico Imbanaco,CLINICA,3,3.4512,-76.531,19,Cra 38A # 5B-10,Santiago de Cali,Valle del Cauca,True,57,+573010745370,info@ipscmp007.gov.co,Location/ips-cmp-007
+ips-psq-008,Hospital Psiquiátrico Departamental,HOSPITAL,2,3.4401,-76.532,9,Calle 9 # 36-40,Santiago de Cali,Valle del Cauca,True,106,(+57)3146456066,info@ipspsq008.gov.co,Location/ips-psq-008
+ips-snv-009,Hospital Isaías Duarte Cancino,HOSPITAL,2,3.3398,-76.5521,15,Cra 50D # 10-65,Santiago de Cali,Valle del Cauca,True,219,672 42 64,info@ipssnv009.gov.co,Location/ips-snv-009
+ips-car-010,Clínica Rey David,CLINICA,3,3.4601,-76.5198,2,Cra 10 # 70-32,Santiago de Cali,Valle del Cauca,True,51,57 321 970 99 29,info@ipscar010.gov.co,Location/ips-car-010
+ips-nor-011,Hospital Carlos Holmes Trujillo,HOSPITAL,2,3.4831,-76.5072,6,Calle 72 # 26B-41,Santiago de Cali,Valle del Cauca,True,231,+573244045932,info@ipsnor011.gov.co,Location/ips-nor-011
+ips-occ-012,Clínica de Occidente,CLINICA,2,3.4321,-76.5654,18,Av 3N # 56-47,Santiago de Cali,Valle del Cauca,True,94,57 311 183 11 25,info@ipsocc012.gov.co,Location/ips-occ-012
+ips-pro-013,Clínica Palermo,CLINICA,2,3.4568,-76.5342,19,Cra 32 # 5-68,Santiago de Cali,Valle del Cauca,True,44,609 993 55 53,info@ipspro013.gov.co,Location/ips-pro-013
+ips-cuc-014,Unidad Central del Valle del Cauca,CLINICA,2,3.4721,-76.5143,2,Calle 62 # 14-28,Santiago de Cali,Valle del Cauca,True,43,(+57)3288550104,info@ipscuc014.gov.co,Location/ips-cuc-014
+ips-las-015,Clínica Las Américas,CLINICA,2,3.4189,-76.5501,18,Cra 80 # 11-23,Santiago de Cali,Valle del Cauca,True,51,57 301 170 47 13,info@ipslas015.gov.co,Location/ips-las-015
+ips-sur-016,Hospital Mario Correa Rengifo,HOSPITAL,2,3.3861,-76.5321,14,Cra 8W # 51-54,Santiago de Cali,Valle del Cauca,True,135,57 322 564 87 71,info@ipssur016.gov.co,Location/ips-sur-016
+ips-col-017,Clínica Colombia,CLINICA,3,3.4512,-76.5421,19,Calle 6N # 3A-28,Santiago de Cali,Valle del Cauca,True,69,(+57)3067612598,info@ipscol017.gov.co,Location/ips-col-017
+ips-mem-018,Hospital Meissen,HOSPITAL,1,3.4201,-76.5068,13,Cra 15 # 22-84,Santiago de Cali,Valle del Cauca,True,209,(+57)3118658768,info@ipsmem018.gov.co,Location/ips-mem-018
+ips-san-019,Clínica San Fernando,CLINICA,2,3.4389,-76.5498,19,Cra 40 # 5C-08,Santiago de Cali,Valle del Cauca,True,117,(+57)3071253268,info@ipssan019.gov.co,Location/ips-san-019
+ips-can-020,Centro de Salud Cañaveralejo,CENTRO_SALUD,1,3.4102,-76.5601,18,Cra 74 # 5-38,Santiago de Cali,Valle del Cauca,True,15,018003488523,info@ipscan020.gov.co,Location/ips-can-020
+ips-agu-021,Centro de Salud Agua Blanca,CENTRO_SALUD,1,3.4021,-76.4901,13,Cra 16 # 32-45,Santiago de Cali,Valle del Cauca,True,32,576073232885,info@ipsagu021.gov.co,Location/ips-agu-021
+ips-sil-022,Hospital del Sur Jorge Cristo Sahium,HOSPITAL,2,3.3721,-76.5421,16,Calle 80 Sur # 30-12,Santiago de Cali,Valle del Cauca,True,130,+57 307 322 77 77,info@ipssil022.gov.co,Location/ips-sil-022
+ips-buv-023,Clínica Buenaventura Integral,CLINICA,2,3.4601,-76.5261,2,Cra 1E # 68-35,Santiago de Cali,Valle del Cauca,True,109,57 313 972 52 59,info@ipsbuv023.gov.co,Location/ips-buv-023
+ips-alb-024,Centro de Salud Altos de Menga,CENTRO_SALUD,1,3.5021,-76.5012,1,Cra 12 # 82-45,Santiago de Cali,Valle del Cauca,True,28,573260746939,info@ipsalb024.gov.co,Location/ips-alb-024
+ips-nav-025,Hospital Nivel 1 Navarro,HOSPITAL,1,3.3901,-76.5201,15,Diagonal 40 # 3B-12,Santiago de Cali,Valle del Cauca,True,136,3119782680,info@ipsnav025.gov.co,Location/ips-nav-025
+ips-pie-026,Unidad de Salud Pie de Monte Litoral,CENTRO_SALUD,1,3.4712,-76.5401,20,Cra 26 # 56-12,Santiago de Cali,Valle del Cauca,True,29,6357522,info@ipspie026.gov.co,Location/ips-pie-026
+ips-sbo-027,Clínica Santa Bárbara,CLINICA,2,3.4312,-76.5212,9,Calle 13 # 14-56,Santiago de Cali,Valle del Cauca,True,115,+57 327 118 37 64,info@ipssbo027.gov.co,Location/ips-sbo-027
+ips-elo-028,Hospital El Oriente,HOSPITAL,1,3.4101,-76.5001,13,Cra 22 # 28-45,Santiago de Cali,Valle del Cauca,True,151,01 8003 781 282,info@ipselo028.gov.co,Location/ips-elo-028
+ips-gua-029,Centro de Salud Guabal,CENTRO_SALUD,1,3.4251,-76.5401,9,Calle 9 # 26-78,Santiago de Cali,Valle del Cauca,True,40,(+57)3259754459,info@ipsgua029.gov.co,Location/ips-gua-029
+ips-tmp-030,Clínica Tamesis,CLINICA,2,3.4451,-76.5312,19,Cra 36 # 3A-15,Santiago de Cali,Valle del Cauca,True,40,(+57)3060353090,info@ipstmp030.gov.co,Location/ips-tmp-030
+ips-blt-031,Hospital Bello Horizonte,HOSPITAL,1,3.4812,-76.5212,6,Calle 68 # 22-34,Santiago de Cali,Valle del Cauca,True,120,57 329 910 45 90,info@ipsblt031.gov.co,Location/ips-blt-031
+ips-esq-032,Centro de Salud Esquina del Futuro,CENTRO_SALUD,1,3.3651,-76.5312,21,Cra 45 # 70-23,Santiago de Cali,Valle del Cauca,True,37,+573006479949,info@ipsesq032.gov.co,Location/ips-esq-032
+ips-com-033,IPS Comfandi Norte,IPS_EPS,2,3.4751,-76.5121,6,Calle 72N # 12-35,Santiago de Cali,Valle del Cauca,True,57,+57 309 880 24 29,info@ipscom033.gov.co,Location/ips-com-033
+ips-cof-034,IPS Comfamiliar del Valle,IPS_EPS,2,3.4412,-76.5512,18,Cra 82 # 10-45,Santiago de Cali,Valle del Cauca,True,51,3044673759,info@ipscof034.gov.co,Location/ips-cof-034
+ips-snu-035,Clínica Nueva,CLINICA,2,3.4512,-76.5198,2,Cra 8 # 66-46,Santiago de Cali,Valle del Cauca,True,75,57 313 518 59 13,info@ipssnu035.gov.co,Location/ips-snu-035
+ips-pmd-036,Punto Médico Desepaz,CENTRO_SALUD,1,3.3812,-76.4951,21,Cra 32 # 72-12,Santiago de Cali,Valle del Cauca,True,19,+573263127868,info@ipspmd036.gov.co,Location/ips-pmd-036
+ips-crb-037,Clínica Rafael Uribe Uribe,CLINICA,2,3.4212,-76.5101,13,Cra 19 # 24-28,Santiago de Cali,Valle del Cauca,True,67,573120002665,info@ipscrb037.gov.co,Location/ips-crb-037
+ips-cnr-038,Centro de Salud Normandía,CENTRO_SALUD,1,3.5101,-76.5021,1,Cra 10 # 90-34,Santiago de Cali,Valle del Cauca,True,45,57 324 587 73 36,info@ipscnr038.gov.co,Location/ips-cnr-038
+ips-vip-039,Hospital Vista Hermosa,HOSPITAL,1,3.4151,-76.5551,18,Cra 76 # 9-23,Santiago de Cali,Valle del Cauca,True,166,(+57)3042658422,info@ipsvip039.gov.co,Location/ips-vip-039
+ips-cps-040,Clínica Corpas Salud,CLINICA,2,3.4621,-76.5301,3,Calle 52 # 30-12,Santiago de Cali,Valle del Cauca,True,53,6045842181,info@ipscps040.gov.co,Location/ips-cps-040
+ips-sga-041,Centro de Salud San Cayetano,CENTRO_SALUD,1,3.4351,-76.5321,9,Calle 10 # 32-15,Santiago de Cali,Valle del Cauca,True,17,573273737943,info@ipssga041.gov.co,Location/ips-sga-041
+ips-dpv-042,Clínica del Pacífico,CLINICA,2,3.4501,-76.5401,19,Cra 38 # 6-45,Santiago de Cali,Valle del Cauca,True,88,57 602 797 26 38,info@ipsdpv042.gov.co,Location/ips-dpv-042
+ips-med-043,Mediláser Cali Sur,IPS_EPS,2,3.3951,-76.5351,16,Cra 40 # 60-23,Santiago de Cali,Valle del Cauca,True,36,(+57)6017928621,info@ipsmed043.gov.co,Location/ips-med-043
+ips-snc-044,Centro de Salud Siete de Agosto,CENTRO_SALUD,1,3.4851,-76.5151,6,Calle 70 # 18-45,Santiago de Cali,Valle del Cauca,True,26,+57 305 234 24 66,info@ipssnc044.gov.co,Location/ips-snc-044
+ips-cob-045,Clínica Obregón,CLINICA,2,3.4421,-76.5261,9,Cra 29 # 8-34,Santiago de Cali,Valle del Cauca,True,84,(+57) 326 183 60 71,info@ipscob045.gov.co,Location/ips-cob-045
