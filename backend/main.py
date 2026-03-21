@@ -1,20 +1,6 @@
 """
 main.py — FastAPI Clustering API
 Taller 1: Sistema de Clustering Geoespacial para Red de Salud Cali
-UAO 2026-1
-
-Endpoints:
-  GET  /health                    — Estado del servidor
-  POST /clustering/kmeans         — K-Means clustering
-  POST /clustering/dbscan         — DBSCAN clustering
-  POST /clustering/gmm            — Gaussian Mixture Model
-  GET  /clustering/results        — Comparativa de métricas
-  GET  /ips                       — Lista de IPS con ocupación
-  GET  /patients/geojson          — Pacientes como GeoJSON
-  POST /fhir/Encounter            — Registrar ingreso paciente (FHIR)
-  PATCH /fhir/Encounter/{id}      — Dar de alta (FHIR)
-  GET  /fhir/Location             — IPS cercanas (geoespacial)
-  GET  /ws/encounters             — WebSocket (tiempo real)
 """
 
 import json

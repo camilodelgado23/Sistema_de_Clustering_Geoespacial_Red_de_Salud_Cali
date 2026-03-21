@@ -1,7 +1,5 @@
 # 🏥 Taller 1 — Sistema de Clustering Geoespacial para Red de Salud Cali
-**UAO · Seminario de Ingeniería de Datos e IA · 2026-1**
-
-Stack: Python · Docker · PostGIS · FastAPI · Leaflet.js · FHIR R4
+**UAO · Salud Digital · 2026-1**
 
 ---
 
@@ -26,7 +24,8 @@ taller1/
 │   ├── requirements.txt
 │   ├── main.py                 ← FastAPI: clustering + FHIR endpoints
 │   └── etl/
-│       └── parse_fhir.py       ← ETL: CSV → PostGIS + HAPI FHIR
+│       ├── __init__.py
+│       └── parse_fhir.py       ← ETL: Extrae CSV → Transforma a FHIR → Carga en PostGIS
 │
 └── frontend/
     ├── index.html              ← Mapa Leaflet.js + panel de clustering
@@ -153,7 +152,7 @@ Cuando registras un Encounter (ingreso), el marcador de la IPS cambia de color e
 
 ```bash
 docker-compose down          # Mantiene los datos
-docker-compose down -v       # Borra TODO (reinicio limpio)
+docker-compose down -v       # Borra TODO 
 ```
 
 ---

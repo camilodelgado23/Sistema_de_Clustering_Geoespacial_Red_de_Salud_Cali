@@ -102,16 +102,3 @@ networks:
   cali_net:
     driver: bridge
 
-# ══════════════════════════════════════════════════════════════
-# ACCESO A SERVICIOS:
-#   Frontend Mapa:  http://localhost:3000
-#   FastAPI Docs:   http://localhost:8001/docs
-#   HAPI FHIR:      http://localhost:8080/fhir
-#   PostgreSQL:     localhost:5432 (geo_user / geo_pass_2026)
-#
-# INICIAR:
-#   docker-compose up --build
-#
-# CARGAR DATOS:
-#   docker exec cali_fastapi python /app/etl/parse_fhir.py
-# ══════════════════════════════════════════════════════════════
