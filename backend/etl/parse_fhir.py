@@ -1,18 +1,5 @@
 """
 ETL: parse_fhir.py
-Taller 1 — Sistema de Clustering Geoespacial para Red de Salud Cali
-UAO 2026-1
-
-Flujo:
-  CSV (cali_ips + cali_patients)
-    → Genera recursos FHIR (Location + Patient)
-    → Inserta en PostgreSQL/PostGIS
-    → Publica en HAPI FHIR (opcional)
-
-Ejecución:
-  python etl/parse_fhir.py
-  # o desde Docker:
-  docker exec cali_fastapi python /app/etl/parse_fhir.py
 """
 
 import csv
@@ -88,7 +75,7 @@ def build_fhir_location(row: dict) -> dict:
             },
             {
                 "url": "http://uao.edu.co/fhir/StructureDefinition/comuna",
-                "valueInteger": int(row["comuna"]),
+                "valueInteger": int(row["comuna"]) if row.get("comuna", "").strip() else 0,
             },
         ],
     }
@@ -187,7 +174,7 @@ def load_ips_to_postgis(conn, csv_path: str) -> int:
                 "nivel_atencion": int(row["nivel_atencion"]),
                 "capacidad_camas": int(row["capacidad_camas"]),
                 "habilitada": row["habilitada"] == "True",
-                "comuna": int(row["comuna"]),
+                "comuna": int(row["comuna"]) if row.get("comuna", "").strip() else None,
             })
             count += 1
     conn.commit()

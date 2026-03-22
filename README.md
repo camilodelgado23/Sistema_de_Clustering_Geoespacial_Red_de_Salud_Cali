@@ -6,30 +6,31 @@
 ## 📁 Estructura del proyecto
 
 ```
-taller1/
-├── docker-compose.yml          ← Levanta todo el stack
+Taller_1_Sistema_de_Clustering_Geoespacial_Red_de_Salud_Cali/
+├── docker-compose.yml
 ├── README.md
 │
 ├── data/
-│   ├── cali_ips.csv            ← 45 IPS reales de Cali (REPS Minsalud)
+│   ├── reps_cali_real.csv      ← NUEVO: fuente real del REPS Minsalud
+│   ├── cali_ips.csv            ← generado desde reps_cali_real.csv
 │   ├── cali_patients.csv       ← 3.491 pacientes sintéticos
 │   ├── comunas_cali.geojson    ← 22 comunas GeoJSON
-│   └── generate_data.py        ← Script que generó los datos
+│   └── generate_data.py        ← lee reps_cali_real.csv y genera los 3 archivos
 │
 ├── database/
-│   └── init.sql                ← PostGIS: tablas, índices GIST, triggers
+│   └── init.sql
 │
 ├── backend/
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   ├── main.py                 ← FastAPI: clustering + FHIR endpoints
+│   ├── main.py
 │   └── etl/
 │       ├── __init__.py
-│       └── parse_fhir.py       ← ETL: Extrae CSV → Transforma a FHIR → Carga en PostGIS
+│       └── parse_fhir.py
 │
 └── frontend/
-    ├── index.html              ← Mapa Leaflet.js + panel de clustering
-    └── comunas_cali.geojson    ← Para el mapa
+    ├── index.html
+    └── comunas_cali.geojson
 ```
 
 ---
@@ -39,10 +40,9 @@ taller1/
 ### Paso 1 — Levantar el stack
 
 ```bash
-cd taller1
+cd Taller_1_Sistema_de_Clustering_Geoespacial_Red_de_Salud_Cali
 docker-compose up --build
 ```
-
 Espera ~2 minutos la primera vez (descarga imágenes Docker).
 
 **Servicios que levanta:**
