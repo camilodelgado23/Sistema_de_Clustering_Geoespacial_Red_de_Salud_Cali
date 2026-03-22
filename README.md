@@ -11,10 +11,10 @@ Taller_1_Sistema_de_Clustering_Geoespacial_Red_de_Salud_Cali/
 ├── README.md
 │
 ├── data/
-│   ├── reps_cali_real.csv      ← NUEVO: fuente real del REPS Minsalud
+│   ├── reps_cali_real.csv      ← fuente real del REPS Minsalud
 │   ├── cali_ips.csv            ← generado desde reps_cali_real.csv
 │   ├── cali_patients.csv       ← 3.491 pacientes sintéticos
-│   ├── comunas_cali.geojson    ← 22 comunas GeoJSON
+│   ├── comunas_cali.geojson    ← comunas GeoJSON
 │   └── generate_data.py        ← lee reps_cali_real.csv y genera los 3 archivos
 │
 ├── database/
