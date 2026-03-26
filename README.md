@@ -1,6 +1,4 @@
-# 🏥 Taller 1 — Sistema de Clustering Geoespacial para Red de Salud Cali
-**UAO · Salud Digital · 2026-1**
-
+# 🏥 Sistema de Clustering Geoespacial para Red de Salud Cali
 ---
 
 ## 📁 Estructura del proyecto
